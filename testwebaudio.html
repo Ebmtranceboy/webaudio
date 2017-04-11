@@ -1,0 +1,16 @@
+<html>
+<script>
+
+
+  var audio = window.AudioContext||window.webkitAudioContext;
+  var context = new audio();
+  
+  // set up the basic oscillator chain, muted to begin with.
+  var oscillator = context.createOscillator();
+  oscillator.frequency.setValueAtTime(110, 0);
+  oscillator.connect(context.destination);
+
+  oscillator.start(0);  // Go ahead and start up the oscillator
+
+</script>
+</html>
