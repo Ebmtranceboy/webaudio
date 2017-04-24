@@ -1,0 +1,64 @@
+array new 		arr.slice(0)
+base64			matrix.html
+currying		fun.apply(
+declaration		function(){x=1} => var x; function(){x=1}
+distortion		wave-shaper.html
+dynamic audio tag	audioDyn.html
+FileSaver		stream-destination.html
+html			.bold(), .italics(), .big() ...
+generator		function* idMaker() {
+  				var index = 0;
+  				while(true)
+    					yield index++;
+			}
+
+			var gen = idMaker();
+
+global variables	stored in the window object
+implicit hoisting	(...) var f = function(){}; 
+				=> 
+			var f; (...) f = function(){};
+index		 	indexOf()
+input.files		player.html
+iterator		function makeIterator(array) {
+    				var nextIndex = 0;
+    
+    				return {
+       					next: function() {
+           					return nextIndex < array.length ?
+               						{value: array[nextIndex++], done: false} :
+               						{done: true};
+       						}
+    				};
+			}
+last occurrence		lastIndexOf()
+local audio source	element-source.html
+MIDI			midi.html
+number of digits	toPrecision()
+nub			function(arr){return arr.filter(function(elt,pos){return arr.indexOf(elt) == pos;})}
+objects			Function.prototype.construct = function(aArgs) {
+  				var oNew = Object.create(this.prototype);
+  				this.apply(oNew, aArgs);
+  				return oNew;
+			};
+			function MyConstructor() {
+  				for (var nProp = 0; nProp < arguments.length; nProp++) {
+    					this['property' + nProp] = arguments[nProp];
+  				}
+			}
+			var myArray = [4, 'Hello world!', false];
+			var myInstance = MyConstructor.construct(myArray);
+			console.log(myInstance instanceof MyConstructor);
+portamento		midi.html
+regex			/^\d{3,}$/.test(str)
+MediaRecorder		stream-destination.html
+MediaStreamDestination	stream-destination.html
+sections 		Function.prototype.bind()
+scope			the only common thing that will change the scope is entering a function
+sequencer		matrix.html
+substring		substr()
+two to one		reduceRight()
+var args		arguments[0], ...
+WaveShaper		wave-shaper.html
+
+
